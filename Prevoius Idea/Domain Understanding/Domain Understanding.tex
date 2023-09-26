@@ -1,0 +1,154 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{a4paper}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,      % color of internal links
+    citecolor=blue,      % color of links to bibliography
+    filecolor=magenta,   % color of file links
+    urlcolor=cyan,       % color of external links
+    linkbordercolor={1 1 1}, % set to white
+    citebordercolor={1 1 1}, % set to white
+    urlbordercolor={1 1 1}   % set to white
+}
+
+\title{\textbf{Predictive Analysis of Antibiotic Resistance in Bacterial Strains via DNA Sequence Motifs}}
+\author{Michał Raczkowski \\
+        Fontys ICT - AI-core-AI4-RB02}
+\date{\today}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{\fill}
+    {\LARGE \textbf{Domain Understanding}}
+    \bigbreak
+    \bigbreak
+
+    {\LARGE {Predictive Analysis of Antibiotic Resistance in Bacterial Strains via DNA Sequence Motifs}}
+    \vspace{2cm}\\
+    \large{Author: Michał Raczkowski}\\
+    {Student number: 4465024 }\\
+    {Fontys ICT - 
+    AI-core-AI4-RB02
+    }
+
+    \vspace{2cm}
+    \today
+    \vspace*{\fill}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+The evolution of antibiotic resistance in bacteria poses a significant challenge to modern medicine. This research aims to ascertain whether specific DNA sequence motifs can be used as markers to predict antibiotic resistance in bacterial strains.
+
+\section{Background}
+Antibiotics have historically been instrumental in combating bacterial infections. However, with the emergence of antibiotic-resistant strains, there is an urgent need to understand the genetic markers responsible for this resistance. This work seeks to investigate the genetic blueprints of these strains for potential predictive patterns.
+
+\section{Domain Definition}
+Below are key terminologies pertinent to this study:
+
+\begin{description}
+    \item[DNA (Deoxyribonucleic Acid):] The molecular carrier of genetic instructions in all known living organisms and many viruses.
+    \item[Genes:] DNA segments responsible for encoding functional products, typically proteins.
+    \item[DNA Motifs:] Recurrent DNA patterns with potential biological significance, often recognized and bound by specific proteins.
+    \item[Antibiotic Resistance:] A phenomenon where bacteria evolve mechanisms to mitigate the effects of antibiotics.
+    \item[Chromosome:] DNA molecules containing an organism's genetic material.
+    \item[Genome:] The entirety of an organism's genetic content.
+\end{description}
+
+\section{Problem Statement}
+The rise of antibiotic-resistant bacterial strains necessitates innovative methods for timely detection and effective treatment. By examining DNA sequence motifs, this study endeavors to predict the likelihood of antibiotic resistance in various bacterial strains.
+
+\section{User \& Stakeholder Analysis}
+\begin{description}
+    \item[Users:] Molecular biologists, microbiologists, and medical practitioners.
+    \item[Needs:] A robust method for predicting antibiotic resistance based on genetic markers.
+    \item[Expectations:] An efficient tool that provides accurate predictions with minimal errors.
+\end{description}
+
+\section{Domain Dynamics}
+The landscape of genomics and molecular biology is rapidly evolving. Advancements in sequencing technologies and bioinformatics tools continually provide novel insights into bacterial genomics and the dynamics of antibiotic resistance.
+
+\section{Data Understanding}
+The success of this research hinges on obtaining comprehensive DNA sequences from diverse bacterial strains. Fortunately, there are vast repositories where such sequences are collated and made available for research.
+
+\section{Existing Solutions and Tools}
+Currently, bacterial antibiotic resistance is often determined via antibiotic susceptibility tests. Some bioinformatics tools can analyze specific DNA sequences, but a comprehensive tool for predicting antibiotic resistance remains elusive.
+
+\section{Domain Challenges and Pain Points}
+The genetic mechanisms underpinning antibiotic resistance are complex and multifaceted. Moreover, environmental factors can further complicate the predictive analysis. Multi-drug resistant strains present additional challenges due to their resistance to multiple antibiotics.
+
+\section{Opportunities for Improvement}
+By leveraging modern computational methods and large genomic datasets, it's possible to develop a more comprehensive tool that can predict antibiotic resistance based on DNA motifs, which would revolutionize bacterial diagnostics and treatment strategies.
+
+\section{Recommendations and Next Steps}
+\begin{itemize}
+    \item Collaborate with genomic repositories to access a wide array of bacterial DNA sequences.
+    \item Catalog DNA motifs associated with known antibiotic resistance genes.
+    \item Evaluate computational models' efficacy in predicting antibiotic resistance using collected DNA sequences.
+\end{itemize}
+
+\section{Appendices}
+Supplementary information, including detailed descriptions of DNA motifs and other pertinent findings, will be included in this section.
+
+\section{Analytic Approach}
+\begin{enumerate}
+    \item \textbf{Data Collection:} Accumulate relevant data, emphasizing sequences associated with antibiotic resistance genes.
+    \item \textbf{Data Cleaning:} Ensure dataset consistency, noise reduction, and handle missing values.
+    \item \textbf{Feature Extraction:} Pinpoint DNA motifs consistently linked with specific antibiotic resistance.
+    \item \textbf{Model Building:} Utilize machine learning algorithms for predictive model training. Algorithms such as Random Forests, SVMs, or deep learning models like CNNs could be apt given the data's sequential nature.
+    \item \textbf{Validation and Testing:} Employ a rigorous validation process using separate training and test datasets to ensure model accuracy.
+    \item \textbf{Deployment:} Integrate a validated model into diagnostic platforms for real-time predictions.
+\end{enumerate}
+
+\section{Potential Data Sources and File Formats}
+\begin{description}
+    \item[NCBI's Antibiotic Resistance Genes Database (ARDB):] Comprehensive database of antibiotic resistance-related sequences.
+    \begin{itemize}
+        \item \textbf{File Extensions:} `.fasta`, `.gb` (GenBank format)
+    \end{itemize}
+    \item[ResFinder:] Database for identifying antibiotic resistance genes in bacterial DNA.
+    \begin{itemize}
+        \item \textbf{File Extensions:} `.fasta`
+    \end{itemize}
+    \item[PATRIC:] Extensive bacterial genome database.
+    \begin{itemize}
+        \item \textbf{File Extensions:} `.fasta`, `.gff` (General Feature Format)
+    \end{itemize}
+    \item[Local Health Departments:] Region-specific bacterial DNA sequences.
+    \begin{itemize}
+        \item \textbf{File Extensions:} Can vary, but common formats include `.fasta`, `.fastq`, and `.vcf`.
+    \end{itemize}
+\end{description}
+
+\section{File Format Descriptions}
+\begin{description}
+    \item[.fasta:] A common format for DNA, RNA, or protein sequences. Each entry has a description line followed by sequences.
+    \item[.gb or .genbank:] GenBank format. Used for coding sequences, RNA sequences, and provides annotations related to the sequences.
+    \item[.gff:] General Feature Format. Used to describe genes and other features of DNA, RNA, and protein sequences.
+    \item[.fastq:] Provides both the sequence of the read fragments and their corresponding quality scores. Commonly used in next-generation sequencing.
+    \item[.vcf:] Variant Call Format. Used in bioinformatics for storing gene sequence variations.
+\end{description}
+
+\section{Expected Results and Deliverables}
+At the culmination of this research, the anticipated outcomes are:
+
+\begin{itemize}
+    \item A comprehensive catalog of DNA motifs associated with antibiotic resistance.
+    \item A validated predictive model capable of ascertaining antibiotic resistance likelihood based on analyzed sequences.
+    \item A user-friendly platform enabling researchers and medical practitioners to utilize the predictive tool in real-time.
+\end{itemize}
+
+\end{document}

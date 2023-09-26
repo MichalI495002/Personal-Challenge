@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}Genomic Data}{2}{section.1}%
+\contentsline {section}{\numberline {2}Auxiliary Data}{2}{section.2}%
+\contentsline {section}{\numberline {3}Data Quality Requirements}{3}{section.3}%
+\contentsline {section}{\numberline {4}Data Storage and Management}{3}{section.4}%
+\contentsline {section}{\numberline {5}Possible Data Sources}{3}{section.5}%

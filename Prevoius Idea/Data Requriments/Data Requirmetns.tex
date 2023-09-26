@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{a4paper}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,      % color of internal links
+    citecolor=blue,      % color of links to bibliography
+    filecolor=magenta,   % color of file links
+    urlcolor=cyan,       % color of external links
+    linkbordercolor={1 1 1}, % set to white
+    citebordercolor={1 1 1}, % set to white
+    urlbordercolor={1 1 1}   % set to white
+}
+
+\title{\textbf{Predictive Analysis of Antibiotic Resistance in Bacterial Strains via DNA Sequence Motifs}}
+\author{Michał Raczkowski \\
+        Fontys ICT - AI-core-AI4-RB02}
+\date{\today}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{\fill}
+    {\LARGE \textbf{Data Requirmetns}}
+    \bigbreak
+    \bigbreak
+
+    {\LARGE {Predictive Analysis of Antibiotic Resistance in Bacterial Strains via DNA Sequence Motifs}}
+    \vspace{2cm}\\
+    \large{Author: Michał Raczkowski}\\
+    {Student number: 4465024 }\\
+    {Fontys ICT - 
+    AI-core-AI4-RB02
+    }
+
+    \vspace{2cm}
+    \today
+    \vspace*{\fill}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Genomic Data}
+\begin{description}
+    \item[Sequence Data:] \
+    \begin{itemize}
+        \item \textbf{Type:} DNA sequences of bacterial strains.
+        \item \textbf{Format:} FASTA. Each entry should have a unique identifier and the corresponding DNA sequence.
+        \item \textbf{Details:} Complete genomes or specific genes associated with antibiotic resistance (e.g., \textit{bla} genes for \textit{E. coli}).
+    \end{itemize} 
+    \item[Metadata:] \
+    \begin{itemize}
+        \item \textbf{Type:} Supplementary information for each bacterial strain.
+        \item \textbf{Details:} Bacterial strain identifier, source, collection date, location, clinical outcomes, resistance phenotypes, etc.
+    \end{itemize}
+\end{description}
+
+\section*{Antibiotic Resistance Phenotype Data}
+\begin{description}[leftmargin=1cm]
+    \item[Resistance Profile:] \
+    \begin{itemize}
+        \item \textbf{Type:} Results from antibiotic susceptibility tests.
+        \item \textbf{Format:} Tabular data linking strain identifiers to susceptibility results.
+        \item \textbf{Details:} Includes MIC values, interpretation (Resistant, Intermediate, Susceptible), antibiotic type, etc.
+    \end{itemize}
+\end{description}
+
+\section{Auxiliary Data}
+\begin{description}
+    \item[Reference Data:] \
+    \begin{itemize}
+        \item \textbf{Type:} Known antibiotic resistance genes and variants.
+        \item \textbf{Source:} Databases like ResFinder, CARD, etc.
+        \item \textbf{Format:} FASTA or similar with sequences of known resistance genes.
+        \item \textbf{Details:} Aid in identifying genes or motifs in the genome data associated with resistance.
+    \end{itemize} 
+    \item[Control Sequences:]\
+    \begin{itemize}
+        \item \textbf{Type:} DNA sequences of strains known to be susceptible.
+        \item \textbf{Purpose:} For building a balanced dataset.
+    \end{itemize}
+\end{description}
+
+\section{Data Quality Requirements}
+\begin{itemize}
+    \item \textbf{Accuracy:} Accurate sequences without errors.
+    \item \textbf{Completeness:} Full genomes or comprehensive gene sequences.
+    \item \textbf{Consistency:} Matching metadata and phenotype data.
+    \item \textbf{Resolution:} High-resolution genomic data, preferably from WGS.
+\end{itemize}
+
+\section{Data Storage and Management}
+\begin{itemize}
+    \item \textbf{Database System:} A relational database system like MySQL or PostgreSQL.
+    \item \textbf{Backup:} Regular data backups.
+\end{itemize}
+
+\section{Possible Data Sources}
+\begin{description}
+    \item[NCBI GenBank:] A comprehensive public database of nucleotide sequences and supporting bibliographic and biological annotation.
+    \item[ResFinder:] A database hosted by the Center for Genomic Epidemiology, focusing specifically on antibiotic resistance genes in bacteria.
+    \item[CARD (Comprehensive Antibiotic Resistance Database):] A rigorously curated collection of known resistance genes.
+    \item[MicrobesOnline:] A platform offering integrated tools for visualizing and analyzing microbial genomes and their associated functional information.
+    \item[ENA (European Nucleotide Archive):] A globally comprehensive data resource for nucleotide sequence, spanning raw data, alignments, and assembled/annotated sequences.
+    \item[PATRIC (Pathosystems Resource Integration Center):] A bioinformatics resource center that provides comprehensive bacterial infectious disease data.
+\end{description}
+
+
+\end{document}
