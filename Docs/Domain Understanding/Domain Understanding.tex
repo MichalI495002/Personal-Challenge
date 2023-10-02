@@ -12,6 +12,10 @@
 \usepackage{booktabs}
 \usepackage[hidelinks]{hyperref}\usepackage{xcolor}
 
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning}
+
+
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{\textbf{Apparel Trade in Poland}}
@@ -37,6 +41,50 @@
 
 \section{Introduction}
 Poland's apparel market offers a wealth of opportunities for businesses. It's a vibrant and diverse landscape where tradition meets modernity. Success in this realm requires a deep understanding of product categories, effective sales strategies, and an awareness of the myriad external factors that influence sales. This document aims to provide an in-depth understanding of the various nuances of the Polish apparel market.
+
+\section{Business Model}
+
+The company operates based on a direct sourcing and distribution model, which can be described in the following steps:
+
+\begin{enumerate}
+    \item \textbf{Product Design and Sourcing:} 
+    The company either sources pre-designed products or creates custom designs tailored to specific needs. For custom designs, the company conceptualizes the design and then collaborates with manufacturing entities in China to bring these designs to life.
+
+    \item \textbf{Production:} 
+    With the designs in hand, the products are then manufactured in specialized factories located in China. These factories are equipped to produce protective gear that meets both the design specifications and any required safety standards.
+
+    \item \textbf{Distribution and Sales:} 
+    Once the products are manufactured and ready for the market, the company takes on the role of distributor. They sell these products to:
+    \begin{itemize}
+        \item DIY shops, like Leroy Merlin.
+        \item Wholesalers who specialize in the distribution of protective gear.
+    \end{itemize}
+
+    \item \textbf{End Consumers:} 
+    The DIY shops and wholesalers, in turn, sell these products to the end consumers. The primary target for these products are companies that require protective gear for their industrial operations. However, there is also a retail segment where individual consumers can purchase these products for personal use.
+\end{enumerate}
+
+Here is visualization of above described business model:
+
+\begin{center}
+    \begin{tikzpicture}[node distance=2.5cm, auto]
+        % Nodes
+        \node[draw, rectangle, rounded corners, text width=4.5cm, align=center] (company) {Polish Trading Company \\ \textit{Role: Design Conception, Product Sourcing \& Distribution}};
+        \node[draw, rectangle, rounded corners, text width=4.5cm, align=center, above=of company] (manufacturers) {Chinese Manufacturers \\ \textit{Role: Production}};
+        \node[draw, rectangle, rounded corners, text width=4.5cm, align=center, below=of company, yshift=-1.5cm, xshift=-3cm] (shops) {DIY Shops \\ \textit{Role: Retail Distribution}};
+        \node[draw, rectangle, rounded corners, text width=4.5cm, align=center, below=of company, yshift=-1.5cm, xshift=3cm] (wholesalers) {Wholesalers \\ \textit{Role: Wholesale Distribution}};
+        \node[draw, rectangle, rounded corners, text width=4.5cm, align=center, below=of shops, yshift=-1.5cm] (individuals) {End Consumers (Individuals) \\ \textit{Role: Personal Use}};
+        \node[draw, rectangle, rounded corners, text width=4.5cm, align=center, below=of wholesalers, yshift=-1.5cm] (consumers) {End Consumers (Industries) \\ \textit{Role: Consumption \& Usage}};
+    
+        % Arrows
+        \draw[->, thick] (company.115) -- (manufacturers.945) node[midway, left, align=center] {Sends Designs};
+        \draw[->, thick] (manufacturers.689) -- (company.50) node[midway, right, align=center] {Delivers Finished Products};
+        \draw[->, thick] (company) -- (shops) node[midway, above, sloped, align=center] {Sells Products};
+        \draw[->, thick] (company) -- (wholesalers) node[midway, above, sloped, align=center] {Distributes Products};
+        \draw[->, thick] (shops) -- (individuals) node[midway, right, align=center] {Retails to Individuals};
+        \draw[->, thick] (wholesalers) -- (consumers) node[midway, right, align=center] {Sells to Industries};
+    \end{tikzpicture}
+    \end{center}
 
 \section{Key Considerations}
 \begin{itemize}
@@ -83,5 +131,11 @@ Data-driven insights can greatly benefit businesses.
 
 \section{Conclusion}
 The apparel market in Poland is both challenging and rewarding. For businesses to thrive, they must stay informed, adaptable, and proactive. With the right blend of market understanding, sales strategy, and responsiveness to external influences, success is not just possible—it's probable.
+
+
+
+
+
+    
 
 \end{document}

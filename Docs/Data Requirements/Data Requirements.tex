@@ -1,0 +1,80 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection.}{1em}{}
+\titleformat{\subsection}{\bfseries}{\thesubsection.}{1em}{}
+
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textbf{Data Requirements for ML Model}}
+\lhead{\today}
+\rfoot{Page \thepage}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{4cm}
+    {\Huge\bfseries Data Requirements for \\ Predicting Sales of Protective Gear in Poland \par}
+    \vspace{2cm}
+    {\large A Comprehensive Guide \par}
+    \vfill
+    \vspace{2cm}
+    {\large \today\par}
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\newpage    
+
+\section{Introduction}
+To build a machine learning model for predicting the sales of protective gear in Poland, it's crucial to gather and understand pertinent datasets. Given the provided datasets on sales data, inflation, and unemployment, this document outlines the data requirements.
+
+\section{Data Requirements}
+
+\subsection{Historical Sales Data}
+
+\begin{itemize}
+    \item \textbf{Date/Time}: Monthly timestamps from January 2019 to September 2023.
+    \item \textbf{Product ID}: A unique identifier for each product (if available).
+    \item \textbf{Product Name}: Name and detailed description of the protective gear.
+    \item \textbf{Classification and Subgroups}: Hierarchical categorization of the product.
+    \item \textbf{Monthly Sales Quantity}: The number of items sold each month.
+    \item \textbf{Total Sales Amount}: Cumulative sales for the period in the dataset.
+\end{itemize}
+
+\subsection{Economic Indicators}
+
+\subsubsection{Inflation Rate}
+\begin{itemize}
+    \item \textbf{Date/Time}: Monthly timestamps from January 2019 to September 2023.
+    \item \textbf{Inflation Rate}: Monthly inflation rate figures for Poland.
+\end{itemize}
+
+\subsubsection{Unemployment Rate}
+\begin{itemize}
+    \item \textbf{Date/Time}: Monthly timestamps from January 2019 to September 2023.
+    \item \textbf{Unemployment Rate}: Monthly unemployment rate figures for Poland.
+\end{itemize}
+
+
+\section{Additional Considerations}
+\begin{itemize}
+    \item \textbf{Data Consistency}: Ensure that the data across different sources is consistent in terms of units, scale, and format.
+    \item \textbf{Data Integrity}: Ensure that the data is accurate, reliable, and free from errors or anomalies.
+    \item \textbf{Frequency of Data Update}: For a more responsive model, more frequent data updates are preferable, but the provided data is monthly.
+\end{itemize}
+
+\section{Conclusion}
+The datasets provided will be crucial for building a machine learning model to predict sales of protective gear in Poland. The historical sales data will serve as the primary training data, while the economic indicators (inflation and unemployment rates) will be useful features to consider external economic influences on sales.
+
+\end{document}
