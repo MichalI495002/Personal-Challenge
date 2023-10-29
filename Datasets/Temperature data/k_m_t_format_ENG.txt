@@ -1,0 +1,14 @@
+
+Station code
+Station name
+Year
+Month
+Average monthly temperature [°C]
+Measurement status TEMP
+Average monthly relative humidity [%]
+Measurement status WLGS
+Average monthly wind speed [m/s]
+Measurement status FWS
+Average monthly overall cloudiness [octants]
+Measurement status NOS
+Status "8" no measurement
