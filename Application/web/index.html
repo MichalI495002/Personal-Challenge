@@ -2,32 +2,46 @@
 <html>
   <head>
     <title>Hello, World!</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <!-- Include eel.js - note this file doesn't exist in the 'web' directory -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
     <script type="text/javascript" src="/eel.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript">
-        $(function(){
+      $(function () {
+        eel.expose(say_hello_js); // Expose this function to Python
+        function say_hello_js(x) {
+          console.log("Hello from " + x);
+        }
+        say_hello_js("Javascript World!");
+        eel.handleinput("connected!"); // Call a Python function
 
-            eel.expose(say_hello_js);               // Expose this function to Python
-            function say_hello_js(x) {
-                console.log("Hello from " + x);
-            }
-            say_hello_js("Javascript World!");
-            eel.handleinput("connected!");  // Call a Python function
-
-            $("#btn").click(function(){console.log("DUPA"); eel.handleinput("DUUUUPPAAA")});
-        }); 
+        $("#btn").click(function () {
+          console.log("DUPA");
+          eel.handleinput("DUUUUPPAAA");
+        });
+      });
     </script>
   </head>
 
   <body>
-      <div class="main">
-        <div class="graph_1"></div>
-        <div class="graph_2"></div>
-        <div class="graph_3"></div>
-        <input type="button" class="fileBtn" value="Choose file" onclick="openFileSelector()">
+    <div class="main">
+      <div id="graph_1">
+        <img id="graph1" style="width: 100%; height: 100%" />
       </div>
+      <div class="graph_2"></div>
+      <div class="graph_3"></div>
+      <input
+        type="button"
+        class="fileBtn"
+        value="Choose file"
+        onclick="openFileSelector()"
+      />
+      <button onclick="generateGraph()">Load Graph</button>
+    </div>
   </body>
 </html>

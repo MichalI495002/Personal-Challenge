@@ -24,7 +24,7 @@ html, body {
     -ms-box-sizing:border-box; 
    
 }
-.graph_1{
+#graph_1 {
     background-color: rgb(139, 137, 137);
     height: 100%;
     grid-column-start: 4;
