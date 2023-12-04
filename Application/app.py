@@ -6,8 +6,7 @@ import pandas as pd
 import base64
 from io import BytesIO
 import mlModule as mlM
-from matplotlib import interactive
-interactive(True)
+
 
 # Set web files folder and optionally specify which file types to check for eel.expose()
 
