@@ -7,13 +7,9 @@ import base64
 from io import BytesIO
 import mlModule as mlM
 
-
 # Set web files folder and optionally specify which file types to check for eel.expose()
 
 eel.init('web')
-
-
-
 
 def generate_graph_base64(fig, width=600, height=400):
     """
@@ -80,4 +76,4 @@ def get_file_from_user(width=600, height=400):
 
 eel.say_hello_js('connected!') 
 
-eel.start('index.html', size=(1400, 800))  
+eel.start('index.html', size=(1800, 1000))  

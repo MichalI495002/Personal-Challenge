@@ -46,3 +46,4 @@ def plot_graph(file_path, width=600, height=400):
     except Exception as e:
         raise Exception(f"An error occurred: {e}")
 
+
