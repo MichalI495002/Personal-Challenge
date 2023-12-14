@@ -33,7 +33,7 @@ html, body {
     grid-row-end: 6;
 
 }
-.graph_2{
+#graph_2{
     background-color: rgb(218, 126, 126);
     height: 100%;
     grid-column-start: 1;
@@ -43,11 +43,31 @@ html, body {
 
 
 }
-.graph_3{
+#graph_3{
     background-color: rgb(136, 241, 136);
     height: 100%;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 5;
     grid-row-end: 8;
+}
+.stylish-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.stylish-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.stylish-button:active {
+    background-color: #003885;
+    transform: scale(0.95);
 }

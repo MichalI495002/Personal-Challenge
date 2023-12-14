@@ -13,12 +13,13 @@ eel.init('web')
 
 def generate_graph_base64(fig, width=600, height=400):
     """
-    Encodes a matplotlib figure object into a base64 string.
-    
+
+    Encodes a matplotlib figure object into a base64 string. 
     :param fig: matplotlib figure object
     :param width: Width of the image in pixels, default is 600
     :param height: Height of the image in pixels, default is 400
     :return: str, base64 encoded string of the graph image
+    
     """
     try:
         dpi = 100  # Set the dots per inch to render
@@ -56,20 +57,15 @@ def handleinput(x):
 @eel.expose
 def get_file_from_user(width=600, height=400):
     file_path = select_file()
-
     # Check if the file exists
     if not os.path.exists(file_path):
         print(f"File not found: {file_path}")
         return None
-    
     print(file_path)
-
     graphFromFile = mlM.plot_graph(file_path)
-    
     graph = generate_graph_base64(graphFromFile, width, height)
-
     print(graph)
-
+    
     return graph
 
 
