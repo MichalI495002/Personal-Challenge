@@ -22,7 +22,7 @@ body {
   -ms-box-sizing: border-box;
 }
 #graph_1 {
-  background-color: rgb(139, 137, 137);
+  background-color: transparent;
   height: 100%;
   grid-column-start: 4;
   grid-column-end: 9;
@@ -30,7 +30,7 @@ body {
   grid-row-end: 6;
 }
 #graph_2 {
-  background-color: rgb(218, 126, 126);
+  background-color: transparent;
   height: 100%;
   grid-column-start: 1;
   grid-column-end: 3;
@@ -38,7 +38,7 @@ body {
   grid-row-end: 9;
 }
 #graph_3 {
-  background-color: rgb(136, 241, 136);
+  background-color: transparent;
   height: 100%;
   grid-column-start: 3;
   grid-column-end: 5;
@@ -46,7 +46,7 @@ body {
   grid-row-end: 9;
 }
 #graph_4 {
-  background-color: rgb(136, 241, 136);
+  background-color: transparent;
   height: 100%;
   grid-column-start: 5;
   grid-column-end: 7;
@@ -54,7 +54,7 @@ body {
   grid-row-end: 9;
 }
 #graph_5 {
-  background-color: rgb(136, 241, 136);
+  background-color: transparent;
   height: 100%;
   grid-column-start: 7;
   grid-column-end: 9;
@@ -62,7 +62,7 @@ body {
   grid-row-end: 9;
 }
 #graph_6 {
-  background-color: rgb(245, 184, 18);
+  background-color: transparent;
   height: 100%;
   grid-column-start: 1;
   grid-column-end: 4;

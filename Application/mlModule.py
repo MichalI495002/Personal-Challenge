@@ -168,11 +168,27 @@ def use_linear_regressor(csv_file_path, width=800, height=600, x_labels_freq=10)
     ax1.plot(future_dates, future_sales_predictions, label='Predicted Sales', linestyle='--', color='red')
     format_plot(ax1, 'Actual vs Predicted Sales', x_labels_freq)
 
-    # Plot Prediction Accuracy (True vs Predicted with regression line and confidence interval)
-    fig2 = plt.figure(figsize=(fig_width, fig_height))
-    ax2 = sns.regplot(x=y_pred, y=y_test, scatter=True, fit_reg=True, color='white')
-    format_plot(ax2, 'Prediction Accuracy', x_labels_freq)
-    ax2.collections[1].set_edgecolor("#2E2E2E")  # Set confidence interval line color to match background
+    # Create the regression plot directly with the styling
+    fig2, ax2 = plt.subplots(figsize=(fig_width, fig_height))
+    ax2.set_facecolor("#2E2E2E")
+    fig2 = plt.gcf()  # Get the current figure
+    fig2.set_facecolor("#2E2E2E")  # Set the facecolor of the figure
+    sns.regplot(x=y_pred, y=y_test, scatter=True, fit_reg=True, scatter_kws={'color': 'white'}, line_kws={'color': 'red'})
+    ax2.grid(True, color='white', linestyle='-', linewidth=0.25, alpha=0.5)
+       # Remove the top and right spines
+    ax2.spines['top'].set_visible(False)
+    ax2.spines['right'].set_visible(False)
+    ax2.spines['bottom'].set_color('white')
+    ax2.spines['left'].set_color('white')
+    ax2.tick_params(axis='x', colors='white')
+    ax2.tick_params(axis='y', colors='white')
+    ax2.xaxis.label.set_color('white')
+    ax2.yaxis.label.set_color('white')
+    ax2.set_xlabel('Predicted Sales')
+    ax2.set_ylabel('True Sales')
+    ax2.title.set_color('white')
+    plt.title('True vs Predicted Sales')
+    sns.despine(ax=ax2)
 
     return fig1, fig2
 
@@ -228,11 +244,27 @@ def use_decision_tree_regressor(csv_file_path, width=800, height=600, x_labels_f
     ax1.plot(future_dates, future_sales_predictions, label='Predicted Sales', linestyle='--', color='red')
     format_plot(ax1, 'Actual vs Predicted Sales', x_labels_freq)
 
-    # Plot Prediction Accuracy (True vs Predicted with regression line and confidence interval)
-    fig2 = plt.figure(figsize=(fig_width, fig_height))
-    ax2 = sns.regplot(x=y_pred, y=y_test, scatter=True, fit_reg=True, color='white')
-    format_plot(ax2, 'Prediction Accuracy', x_labels_freq)
-    ax2.collections[1].set_edgecolor("#2E2E2E")  # Set confidence interval line color to match background
+   # Create the regression plot directly with the styling
+    fig2, ax2 = plt.subplots(figsize=(fig_width, fig_height))
+    ax2.set_facecolor("#2E2E2E")
+    fig2 = plt.gcf()  # Get the current figure
+    fig2.set_facecolor("#2E2E2E")  # Set the facecolor of the figure
+    sns.regplot(x=y_pred, y=y_test, scatter=True, fit_reg=True, scatter_kws={'color': 'white'}, line_kws={'color': 'red'})
+    ax2.grid(True, color='white', linestyle='-', linewidth=0.25, alpha=0.5)
+       # Remove the top and right spines
+    ax2.spines['top'].set_visible(False)
+    ax2.spines['right'].set_visible(False)
+    ax2.spines['bottom'].set_color('white')
+    ax2.spines['left'].set_color('white')
+    ax2.tick_params(axis='x', colors='white')
+    ax2.tick_params(axis='y', colors='white')
+    ax2.xaxis.label.set_color('white')
+    ax2.yaxis.label.set_color('white')
+    ax2.set_xlabel('Predicted Sales')
+    ax2.set_ylabel('True Sales')
+    ax2.title.set_color('white')
+    plt.title('True vs Predicted Sales')
+    sns.despine(ax=ax2)
 
     return fig1, fig2
 
@@ -288,10 +320,26 @@ def use_random_forest_regressor(csv_file_path, width=800, height=600, x_labels_f
     ax1.plot(future_dates, future_sales_predictions, label='Predicted Sales', linestyle='--', color='red')
     format_plot(ax1, 'Actual vs Predicted Sales', x_labels_freq)
 
-    # Plot Prediction Accuracy (True vs Predicted with regression line and confidence interval)
-    fig2 = plt.figure(figsize=(fig_width, fig_height))
-    ax2 = sns.regplot(x=y_pred, y=y_test, scatter=True, fit_reg=True, color='white')
-    format_plot(ax2, 'Prediction Accuracy', x_labels_freq)
-    ax2.collections[1].set_edgecolor("#2E2E2E")  # Set confidence interval line color to match background
+   # Create the regression plot directly with the styling
+    fig2, ax2 = plt.subplots(figsize=(fig_width, fig_height))
+    ax2.set_facecolor("#2E2E2E")
+    fig2 = plt.gcf()  # Get the current figure
+    fig2.set_facecolor("#2E2E2E")  # Set the facecolor of the figure
+    sns.regplot(x=y_pred, y=y_test, scatter=True, fit_reg=True, scatter_kws={'color': 'white'}, line_kws={'color': 'red'})
+    ax2.grid(True, color='white', linestyle='-', linewidth=0.25, alpha=0.5)
+       # Remove the top and right spines
+    ax2.spines['top'].set_visible(False)
+    ax2.spines['right'].set_visible(False)
+    ax2.spines['bottom'].set_color('white')
+    ax2.spines['left'].set_color('white')
+    ax2.tick_params(axis='x', colors='white')
+    ax2.tick_params(axis='y', colors='white')
+    ax2.xaxis.label.set_color('white')
+    ax2.yaxis.label.set_color('white')
+    ax2.set_xlabel('Predicted Sales')
+    ax2.set_ylabel('True Sales')
+    ax2.title.set_color('white')
+    plt.title('True vs Predicted Sales')
+    sns.despine(ax=ax2)
 
     return fig1, fig2
