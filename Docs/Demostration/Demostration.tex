@@ -12,9 +12,19 @@
 \usepackage{booktabs}
 \usepackage[hidelinks]{hyperref}
 \usepackage{xcolor}
+\usepackage{enumitem}
 
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,positioning}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -33,15 +43,38 @@
 \newpage
 
 \section{Introduction}
-The purpose of this document is to present a cross-platform application designed to showcase the AI model to the stakeholder. This application, which utilizes machine learning for sales prediction, consists of a full-stack solution with the front-end developed using HTML/CSS/JavaScript and the back-end implemented in Python with the Eel framework
+The purpose of this document is to present a cross-platform application designed to showcase the AI model to the stakeholder. This application, which utilizes machine learning for sales prediction, consists of a full-stack solution with the front-end developed using HTML/CSS/JavaScript and the back-end implemented in Python with the Eel framework. Stakeholder is responsible for sales department and purchasing department in Europe and South China, due to nature of their work insight to sales is one of main factors of planning action strategy for every qter of the year. Presented solution have task to help in crucial strategy decisions.
 \smallbreak
-\textit{Demonstration date: 13.12.2023}
+\textit{Demonstration date: 15.12.2023}
 \section{Demonstration}
 \subsection{Location}
 The demonstration was conducted in an online meeting due to the geographical location of client
 \subsection{Description}
-The session began with an introduction where I introduced the application designed for predicting sales of protective gear equipment in the Polish market, outlining its key features.
+On the session there was introduction where of the application designed for predicting sales of protective gear equipment in the Polish market, outlining its key features, and preferences of stakeholder. There was presentation of the notebook with explanation of how model comes up with prediction and decisions behind choice of models and features of models for this specific use case We discussed drawbacks of model due to specific use case of application and nature of data, connected with global events which had great influence on data. 
 
+\subsection{Walkthrough}
+Client was able to run application on their device to truly see  usability of application. There was provided mock data for client for testing, but also client had their test data to practice real life scenario. Due to nature of project testing of application, model and prediction was limited because amount of data used by model is significant and hard to put manually 
+Client was able to quickly understand interface of application and showed results.
+
+\subsection{Media}
+There was provided video of usage of application for documetion: \smallbreak
+\href{ https://youtu.be/mwCkFTVhNcA}{Presetaion Video}
+
+\section{Feedback}
+
+\subsection{Questions and Answers}
+\begin{description}[style=nextline]
+    \item[Does application is cross-platform?]
+    Answer: Yes, application can be build to executable file for systems, macOS, Windows and Linux
+    \item[Does application is easily convertible to web application?] Answer: Yes, application is created on python eel framework which is using web based system
+    \item[Does application can use different kind of models?] Answer: It requires significant amount of work to apply different models and to this specific use case different models are based on seasonality 
+    \item[Does user experience can be improved?] Answer: Yes, current state of application is first prototype of creating not code base way of interacting with model
+    \end{description}
+\subsection{Stakeholder Feedback}
+Stakeholder was satisfied that their requirements for web based cross-platform application were fullfield. Also, there were satisfied that there is graphical user interface which is showing state of inputted data, prediction is clearly distinguished from given data, and that there is visual representation of accuracy of the model. Client was slightly disappeared on accuracy of the model, but due to uneven nature of data, client were informed about this nature and challenge behind it accuracy of prediction. For future development expectation of client is to apply more sofisticated models like SARIMA or Prophet for increased accuracy and seasonality. 
+
+\section{Reflection}
+Project faced a lot of challenges especially when to comes to data preperaton and decinadg wchich data is usble and how. Also nature of data was very specific and it was hard for model to have accuracy even on lowest level, due to lack of sesanlity, affects of pandemic, ecomiacal criss, and chnages on politcal field. Becouse of lack of seanality a lot of models were almost unseble or have worst accuracy then simple median. Although stake holder were positivly suprised of appliaction and analyztion and sourcing the data. I was awere of challanges on the begging of project but I undersetimete the challenge. I wondnt take up such challange once again due to furstrating work, and nature of creating machine lering based forcasting. I would enjoy classifiaction problems insted. But due to thi challange I learnd a lot of creative ways to solve probles on the way and abour manipulating data and models to achive better results. 
 
 
 \end{document}
