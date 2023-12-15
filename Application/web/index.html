@@ -31,22 +31,46 @@
   <body>
     <div class="main">
       <div id="graph_1">
-        <img id="graph1" style="width: 100%; height: 100%"/>
+        <img id="graph1" style="width: 100%; height: 100%" />
       </div>
       <div id="graph_2">
-        <img id="graph2" style="width: 100%; height: 100%"/>
+        <img id="graph2" style="width: 100%; height: 100%" />
       </div>
       <div id="graph_3">
-        <img id="graph3" style="width: 100%; height: 100%"/>
-
+        <img id="graph3" style="width: 100%; height: 100%" />
       </div>
-      <input
-        type="button"
-        class="stylish-button"
-        value="Choose file"
-        onclick="openFileSelector()"
-      />
-      <button onclick="generateGraph()">Load Graph</button>
+      <div id="graph_4">
+        <img id="graph4" style="width: 100%; height: 100%" />
+      </div>
+      <div id="graph_5">
+        <img id="graph5" style="width: 100%; height: 100%" />
+      </div>
+      <div id="graph_6">
+        <img id="graph6" style="width: 100%; height: 100%" />
+      </div>
+      <div id="buttonConatiner">
+        <input
+          type="button"
+          class="stylish-buttonFile"
+          value="Choose file"
+          onclick="openFileSelector()"
+        />
+        <button class="stylish-button" onclick="predict_Linear_Regressor()">
+          Linear Prediction
+        </button>
+        <button
+          class="stylish-button"
+          onclick="predict_Decision_Tree_Regressor()"
+        >
+          Decision Tree Prediction
+        </button>
+        <button
+          class="stylish-button"
+          onclick="predict_Random_Forest_Regressor()"
+        >
+          Random Forest Prediction
+        </button>
+      </div>
     </div>
   </body>
 </html>

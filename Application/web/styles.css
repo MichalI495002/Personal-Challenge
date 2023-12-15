@@ -1,73 +1,126 @@
 * {
-    margin: 0;
+  margin: 0;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
-
-
-
 
 .main {
-    display: grid;
-    height: 100%;
-    background-color: rgb(46, 46, 46);
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 20px;
-    row-gap: 20px;
-    padding: 20px;
-    box-sizing:border-box;  
-    -moz-box-sizing:border-box; 
-    -webkit-box-sizing:border-box; 
-    -ms-box-sizing:border-box; 
-   
+  display: grid;
+  height: 100%;
+  background-color: rgb(46, 46, 46);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
 }
 #graph_1 {
-    background-color: rgb(139, 137, 137);
-    height: 100%;
-    grid-column-start: 4;
-    grid-column-end: 9;
-    grid-row-start: 1;
-    grid-row-end: 6;
-
+  background-color: rgb(139, 137, 137);
+  height: 100%;
+  grid-column-start: 4;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
 }
-#graph_2{
-    background-color: rgb(218, 126, 126);
-    height: 100%;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 5;
-
-
+#graph_2 {
+  background-color: rgb(218, 126, 126);
+  height: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 9;
 }
-#graph_3{
-    background-color: rgb(136, 241, 136);
-    height: 100%;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 8;
+#graph_3 {
+  background-color: rgb(136, 241, 136);
+  height: 100%;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 9;
 }
+#graph_4 {
+  background-color: rgb(136, 241, 136);
+  height: 100%;
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+#graph_5 {
+  background-color: rgb(136, 241, 136);
+  height: 100%;
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+#graph_6 {
+  background-color: rgb(245, 184, 18);
+  height: 100%;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 6;
+}
+#buttonConatiner {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
 .stylish-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+  padding: 10px 20px;
+  height: auto;
+  margin: 10px;
+  width: auto;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .stylish-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 .stylish-button:active {
-    background-color: #003885;
-    transform: scale(0.95);
+  background-color: #003885;
+  transform: scale(0.95);
+}
+
+.stylish-buttonFile {
+  padding: 10px 20px;
+  height: auto;
+  margin: 10px;
+  width: auto;
+  font-size: 16px;
+  color: white;
+  background-color: #06af23;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.stylish-buttonFile:hover {
+  background-color: #06c425;
+  transform: scale(1.05);
+}
+
+.stylish-buttonFile:active {
+  background-color: #02941a;
+  transform: scale(0.95);
 }
